@@ -1,2 +1,3 @@
 #!/bin/bash
+/* https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html#Overall-Options */
 gcc -E $CFILE -o c
