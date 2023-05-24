@@ -1,4 +1,3 @@
-#!/bin/bash
 printf "New File Name:\t"
 read file_name
 touch $file_name
