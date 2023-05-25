@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - entry point
@@ -7,15 +8,13 @@
  */
 int main(void)
 {
-	int c;
+	char str[] = "1, 2, 3, 4, 5, 6, 7, 8, 9\n";
+	int i;
 
-	for (c = '0'; c <= '9'; c++)
+	for (i = 0; i < strlen(str); i++)
 	{
-		putchar(c);
-		putchar(',');
-		putchar(' ');
+		putchar(str[i]);
 	}
-	putchar('\n');
 
 	return (0);
 }
