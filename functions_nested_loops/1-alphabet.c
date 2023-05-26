@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * main - entry point thank you Sarah
+ * print_alphabet - entry point thank you Sarah
  *
  * Return: Always 0.
  */
