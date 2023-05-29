@@ -8,5 +8,6 @@
 int print_last_digit(int x)
 {
 	x = x % 10;
-	return (xx);
+	x = x * 11;
+	return (x);
 }
