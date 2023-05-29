@@ -7,8 +7,6 @@
  */
 int print_last_digit(int x)
 {
-	int INT_MIN = y;
-
 	if (x >= 0)
 	{
 		x = (x % 10);
@@ -17,15 +15,8 @@ int print_last_digit(int x)
 	}
 	else if (x < 0)
 	{
-		x = -x;
 		x = (x % 10);
-		_putchar('0' + x);
-		return (x);
-	}
-	else if (x == y)
-	{
 		x = -x;
-		x = (x % 10);
 		_putchar('0' + x);
 		return (x);
 	}
