@@ -22,5 +22,6 @@ int print_last_digit(int x)
 	}
 	else
 	{
+		return (9);
 	}
 }
