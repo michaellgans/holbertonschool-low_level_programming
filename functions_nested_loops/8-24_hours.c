@@ -17,10 +17,10 @@ void jack_bauer(void)
 
 	while (H < 3)
 	{
-		_putchar(H);
-		_putchar(h);
-		_putchar(M);
-		_putchar(m);
+		_putchar('0' + H);
+		_putchar('0' + h);
+		_putchar('0' + M);
+		_putchar('0' + m);
 		H++;
 	}
 	_putchar('\n');
