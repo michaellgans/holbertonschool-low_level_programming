@@ -9,14 +9,12 @@
  */
 int _islower(int c)
 {
-	if (_islower(c))
+	if (c >= 'a' && c <= 'z')
 	{
-		putchar('1');
+		return (1);
 	}
-	else if (!_islower(c))
+	else
 	{
-		putchar('0');
+		return (0);
 	}
-
-	return (0);
 }
