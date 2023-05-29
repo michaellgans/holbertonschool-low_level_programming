@@ -3,7 +3,7 @@
 /**
  * main - entry point thank you Sarah
  *
- * Return: Always 0.
+ * Return: needs to be a number
  */
 int main(void)
 {
