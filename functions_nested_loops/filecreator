@@ -7,7 +7,7 @@ echo -e "#include \"main.h\"
 #include <unistd.h>
 /**
  * main - CHECK YOUR PROTOTYPE
- *
+ * @VAR: CHECK YOUR VAR
  * Return: CHECK YOUR PROTOTYPE
  */
 int main(void) CHECK YOUR PROTOTYPE
@@ -19,7 +19,7 @@ int main(void) CHECK YOUR PROTOTYPE
 	{
 		_putchar(c[x]);
 	}
-	_putchar('\\n');
+	_putchar(\'\\n\');
 
 	return (0);
 }" > $file_name
