@@ -1,17 +1,24 @@
 #include <stdio.h>
+#include "main.h"
+
+/**
+ * print_to_98 - blah
+ * @n: blah
+ */
 
 void print_to_98(int n)
 {
-    int i;
-    if (n <= 98)
-    {
-        for (i = n; i < 98; i++)
-            printf("%d, ", i);
-    }
-    else
-    {
-        for (i = n; i > 98; i--)
-            printf("%d, ", i);
-    }
-    printf("98\n");
+	int x;
+
+	if (n <= 98)
+	{
+		for (x = n; x < 98; x++)
+		printf("%d, ", x);
+	}
+	else
+	{
+		for (x = n; x > 98; x--)
+		printf("%d, ", x);
+	}
+	printf("98\n");
 }
