@@ -6,7 +6,6 @@
 void times_table(void)
 {
 	int x;
-	int y;
 
 	char a[] = "0,  0,  0,  0,  0,  0,  0,  0,  0,  0";
 	char b[] = "0,  1,  2,  3,  4,  5,  6,  7,  8,  9";
@@ -19,21 +18,18 @@ void times_table(void)
 	char i[] = "0,  8, 16, 24, 32, 40, 48, 56, 64, 72";
 	char j[] = "0,  9, 18, 27, 36, 45, 54, 63, 72, 81";
 
-	for (y = 0; y < 10; y++)
+	for (x = 0; x < 38; x++)
 	{
-		for (x = 0; x < 38; x++)
-		{
-		_putchar(a[x]);
-		_putchar(b[x]);
-		_putchar(c[x]);
-		_putchar(d[x]);
-		_putchar(e[x]);
-		_putchar(f[x]);
-		_putchar(g[x]);
-		_putchar(h[x]);
-		_putchar(i[x]);
-		_putchar(j[x]);
-		}
-	_putchar('\n');
+	_putchar(a[x]);
+	_putchar(b[x]);
+	_putchar(c[x]);
+	_putchar(d[x]);
+	_putchar(e[x]);
+	_putchar(f[x]);
+	_putchar(g[x]);
+	_putchar(h[x]);
+	_putchar(i[x]);
+	_putchar(j[x]);
 	}
+	_putchar('\n');
 }
