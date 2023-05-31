@@ -4,7 +4,7 @@
 /**
  * _isdigit - entry point
  * @c: this is the variable
- * Return: 
+ * Return: blah
  */
 
 int _isdigit(int c)
