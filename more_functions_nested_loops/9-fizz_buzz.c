@@ -23,7 +23,7 @@ int main(void)
 		}
 		else if (x % 3 == 0 && x % 5 == 0)
 		{
-			printf("Fizz Buzz ");
+			printf("FizzBuzz ");
 			continue;
 		}
 	printf("%i ", x);
