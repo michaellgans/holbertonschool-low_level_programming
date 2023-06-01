@@ -11,7 +11,7 @@ void more_numbers(void)
 	int y;
 	char c[] = "01234567891011121314";
 
-	for (y = 0; y <= 10; y++)
+	for (y = 0; y <= 9; y++)
 	{
 		for (x = 0; x <= 19; x++)
 		{
