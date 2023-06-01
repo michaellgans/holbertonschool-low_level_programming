@@ -7,14 +7,15 @@
 void more_numbers(void)
 
 {
-	char x;
-	char y;
+	int x;
+	int y;
+	char c[] = "01234567891011121314";
 
 	for (y = 0; y <= 10; y++)
 	{
-		for (x = 0; x <= 14; x++)
+		for (x = 0; x <= 15; x++)
 		{
-			putchar(x);
+			putchar(c[x]);
 		}
 		putchar('\n');
 	}
