@@ -13,7 +13,7 @@ void more_numbers(void)
 
 	for (y = 0; y <= 10; y++)
 	{
-		for (x = 0; x <= 21; x++)
+		for (x = 0; x <= 19; x++)
 		{
 			putchar(c[x]);
 		}
