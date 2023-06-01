@@ -21,6 +21,11 @@ int main(void)
 			printf("Fizz ");
 			continue;
 		}
+		else if (x == 100)
+		{
+			printf("Buzz");
+			continue;
+		}
 		else if (x % 5 == 0)
 		{
 			printf("Buzz ");
