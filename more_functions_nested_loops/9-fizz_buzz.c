@@ -11,7 +11,12 @@ int main(void)
 
 	for (x = 1; x < 101; x++)
 	{
-		if (x % 3 == 0)
+		if (x % 3 == 0 && x % 5 == 0)
+		{
+			printf("FizzBuzz ");
+			continue;
+		}
+		else if (x % 3 == 0)
 		{
 			printf("Fizz ");
 			continue;
@@ -19,11 +24,6 @@ int main(void)
 		else if (x % 5 == 0)
 		{
 			printf("Buzz ");
-			continue;
-		}
-		else if (x % 3 == 0 && x % 5 == 0)
-		{
-			printf("FizzBuzz ");
 			continue;
 		}
 	printf("%i ", x);
