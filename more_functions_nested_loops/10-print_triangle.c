@@ -12,9 +12,9 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		for (spaces = 0; spaces < size; spaces++)
+		for (spaces = 1; spaces <= size; spaces++)
 		{
-			for (rows = 0; rows < size; rows++)
+			for (rows = 1; rows <= size; rows++)
 			{
 				if ((spaces + rows) > size)
 				{
