@@ -16,9 +16,16 @@ void print_triangle(int size)
 	}
 	for (spaces = 0; spaces < size; spaces++)
 	{
-		for (rows = 0; rows < spaces; rows++)
+		for (rows = 0; rows < size; rows++)
 		{
-			putchar('x');
+			if ((spaces + rows) > size)
+			{
+				putchar(35);
+			}
+			else
+			{
+				putchar(' ');
+			}
 		}
 	putchar('\n');
 	}
