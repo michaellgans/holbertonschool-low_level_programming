@@ -13,7 +13,11 @@ void puts_half(char *str)
 
 	for (x = 0; x < length; x++)
 	{
-		if (x < (length / 2) - 1)
+		if (length % 2 != 0 && x < ((length - 1) / 2))
+		{
+			continue;
+		}
+		else if (length % 2 == 0 && x < (length / 2))
 		{
 			continue;
 		}
