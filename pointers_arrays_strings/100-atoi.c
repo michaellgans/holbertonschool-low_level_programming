@@ -19,14 +19,14 @@ int _atoi(char *s)
 		{
 			operation *= -1;
 		}
-	str++
+	str++;
 	}
 	if (*str != '\0')
 	{
 		while (*str >= '0' && *str <= '9')
 		{
 			number = number * 10 + (*str - '0');
-			str++
+			str++;
 		}
 	}
 	return (number * operation);
