@@ -9,15 +9,25 @@
 
 int _atoi(char *s)
 {
-	int x;
-	int length = _strlen(s);
+	int operation = 1;
+	unsigned int number = 0;
+	char *str = s;
 
-	for (x = 0; x < length; x++)
+	while (*str != '\0' && (*str < '0' || *str > '9'))
 	{
-		if (x >= 48 && x <= 57)
+		if (*str == '-')
 		{
-			return (x);
+			operation *= -1;
+		}
+	str++
+	}
+	if (*str != '\0')
+	{
+		while (*str >= '0' && *str <= '9')
+		{
+			number = number * 10 + (*str - '0');
+			str++
 		}
 	}
-	return (x);
+	return (number * operation);
 }
