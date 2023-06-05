@@ -16,8 +16,8 @@ int _atoi(char *s)
 	{
 		if (x >= 48 && x <= 57)
 		{
-			printf("%i\n", x);
+			return (x);
 		}
 	}
-	return (0);
+	return (x);
 }
