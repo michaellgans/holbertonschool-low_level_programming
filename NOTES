@@ -1,0 +1,49 @@
+luke schula
+matternstsr
+matthew graham
+ethan zalta
+jake velasquez
+
+Changed int x; to int x++;
+ISO C forbids nested functions
+expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+error: expected expression before ‘;’ token
+ISO C90 forbids mixed declarations and code
+‘x’ undeclared (first use in this function)
+
+When you don’t reference to a function used in the include statements
+undefined reference to `_strlen'
+
+Included @s: but nothing after
+No description found for parameter or member 's'
+
+When added a space after @s: 
+trailing whitespace 
+
+Changed void to int on prototype. 
+No description found for return value of 'rev_string'
+error: conflicting types for ‘rev_string’
+control reaches end of non-void function
+
+Turned for into if
+suggest parentheses around assignment used as truth value
+expected ‘)’ before ‘;’ token
+
+Changed int x; into char x;
+array subscript has type ‘char’
+
+; after the prototype
+expected identifier or ‘(’ before ‘{’ token
+
+Took out the operator 
+expected ‘;’ before numeric constant
+
+for (x = 0; x < length; 2; x++)
+statement with no effect
+expected ‘)’ before ‘;’ token
+
+Changed temp = s[x] to tempt = s(x)
+called object ‘s’ is not a function or function pointer
+
+passing in a string instead of a character array on the main.c document
+Segmentation fault (core dumped)

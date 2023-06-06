@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "Guess what?"
-read a
-echo "I love you. :)"
-read b
-echo "the anvil counts as a forge, btw..."
-read c
-echo "lol"
