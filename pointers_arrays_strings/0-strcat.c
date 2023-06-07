@@ -14,10 +14,9 @@ char *_strcat(char *dest, char *src)
 	int length = _strlen(dest);
 	int x;
 
-	for (x = 0; src[x] != '\0'; x++)
+	for (x = 0; src[x] != '\0'; x++, length++)
 	{
 		dest[length] = src[x];
 	}
-	printf("The value of length is:%i", length);
 	return (dest);
 }
