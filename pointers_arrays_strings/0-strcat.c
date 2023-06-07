@@ -11,18 +11,13 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *s = dest;
+	int length = _strlen(dest);
+	int x;
 
-	while (*dest != '\0')
+	for (x = 0; src[x] != '\0'; x++)
 	{
-		dest++;
+		dest[length] = src[x];
 	}
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (s);
+	printf("The value of length is:%i", length);
+	return (dest);
 }
