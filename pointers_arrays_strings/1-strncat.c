@@ -3,15 +3,20 @@
 
 /**
  * _strncat - entry
- * @dest - destination
- * @src - source
- * @n - bytes
+ * @dest: - destination
+ * @scrn: - source
+ * @n: - bytes
  * Return: dest
  */
 
 char *_strncat(char *dest, char *scrn, int n)
 {
 	int x;
-	int length = _strnlen(dest);
+	int length = _strlen(dest);
 
-	for (x = 0; src[x] != '\0'; x++, length++)
+	for (x = 0; x < n && scrn[x] != '\0'; x++, length++)
+	{
+		dest[length] = scrn[x];
+	}
+	return (dest);
+}

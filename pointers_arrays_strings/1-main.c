@@ -23,15 +23,4 @@ int main(void)
     printf("%s", s2);
     printf("%s", ptr);
     return (0);
-}
-julien@ubuntu:~/$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-strncat.c -o 1-strncat
-julien@ubuntu:~/$ ./1-strncat 
-Hello 
-World!
-Hello W
-World!
-Hello W
-Hello WWorld!
-World!
-Hello WWorld!
-julien@ubuntu:~/$ 
+} 
