@@ -9,25 +9,11 @@
 char *cap_string(char *abc)
 {
 	int x = 0;
+	int y[] = {',', ';', '.', '?', '"', '(', ')', '{', '}', ' ', '\n', '\t'};
 
 	while (abc[x] != '\0')
 	{
-		if (abc[x] == ' ' || abc[x] == '\n' || abc[x] == '\t' || abc[x] == ',')
-		{
-			x++;
-			abc[x] = abc[x] - 32;
-		}
-		else if (abc[x] == '?' || abc[x] == '"' || abc[x] == '(')
-		{
-			x++;
-			abc[x] = abc[x] - 32;
-		}
-		else if (abc[x] == ';' || abc[x] == '.' || abc[x] == '!')
-		{
-			x++;
-			abc[x] = abc[x] - 32;
-		}
-		else if (abc[x] == ')' || abc[x] == '{' || abc[x] == '}')
+		if (abc[x] == y[x])
 		{
 			x++;
 			abc[x] = abc[x] - 32;
