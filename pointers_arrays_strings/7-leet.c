@@ -6,9 +6,9 @@
  *@string: the string
  *Return: the string
  */
-char *leet(char *string);
+char *leet(char *string)
 {
-  char newstring[100] = mozart(string);
+  char *newstring = mozart(string);
   
   return(newstring);
 }
