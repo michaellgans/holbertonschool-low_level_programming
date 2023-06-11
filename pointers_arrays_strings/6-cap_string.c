@@ -5,20 +5,26 @@
  * @abc: input
  * Return: new string
  */
-
-char *cap_string(char *abc)
+char *cap_string(char *string)
 {
 	int x = 0;
-	int y[] = {',', ';', '.', '?', '"', '(', ')', '{', '}', ' ', '\n', '\t'};
+	int y;
+	int cap_here[] = " \t\n,;.!?\"(){}";
 
 	while (abc[x] != '\0')
 	{
-		if (abc[x] == y[x])
+		for (y = 0; cap_here[y]; y++)
 		{
-			x++;
+			if (abc[x - 1] == cap_here[y] && abc[x] >= 97 && abc[x] <= 122)
+			{
 			abc[x] = abc[x] - 32;
+			}
 		}
 		x++;
+	}
+	if (abc[0] >= 97 && abc[0] <= 122)
+	{
+		abc[0] = abc[0] - 32;
 	}
 	return (abc);
 }
