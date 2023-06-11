@@ -3,8 +3,9 @@
 /**
  * _memset - function
  * @s: pointer to memory block
- * @c: value to set memory to
+ * @b: value to set memory to
  * @n: number of bytes
+ * Return: new string
  */
 
 char *_memset(char *s, char b, unsigned int n)
