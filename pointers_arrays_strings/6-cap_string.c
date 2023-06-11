@@ -5,11 +5,11 @@
  * @abc: input
  * Return: new string
  */
-char *cap_string(char *string)
+char *cap_string(char *abc)
 {
 	int x = 0;
 	int y;
-	int cap_here[] = " \t\n,;.!?\"(){}";
+	char cap_here[] = " \t\n,;.!?\"(){}";
 
 	while (abc[x] != '\0')
 	{
