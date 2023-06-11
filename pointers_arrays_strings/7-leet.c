@@ -8,7 +8,7 @@
  */
 char *leet(char *string)
 {
-  char *newstring = mozart(string);
-  
-  return(newstring);
+	char *newstring = mozart(string);
+
+	return (newstring);
 }
