@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *leet - makes music
+ *mozart - makes music
  *@music: the music
  *Return: music
  */
-char *leet(char *music)
+char *mozart(char *music)
 {
   int x = 0;
   
