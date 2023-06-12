@@ -10,17 +10,16 @@
 char *_strchr(char *s, char c)
 {
 	int x;
-	int length = _strlen(s);
 
 	for (x = 0; s[x]; x++, s++)
 	{
-		if (*s == c)
+		if (*s != c)
+		{
+			continue;
+		}
+		else
 		{
 			return (s);
-		}
-		else if (x == length)
-		{
-			return (NULL);
 		}
 	}
 	return (NULL);
