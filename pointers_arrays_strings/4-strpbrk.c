@@ -1,6 +1,6 @@
 #include "main.h"
  /**
-  * strpbrk - searches for a byte
+  * _strpbrk - searches for a byte
   * @s: where to search
   * @accept: what to search for
   * Return: what was found
