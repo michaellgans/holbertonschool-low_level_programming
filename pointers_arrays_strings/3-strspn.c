@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
  * _strspn - returns the length of accept
@@ -9,15 +8,25 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int x, y;
 	unsigned int count = 0;
+	int x;
 
-	for (x = 0, y = 0; s[x] & accept[y]; x++, y++)
+	while (*s)
 	{
-		if (s[x] == accept[y])
+		for (x = 0; accept[x]; x++)
 		{
-			count++;
+			if (*s == accept[x])
+			{
+				count++;
+				break;
+			}
+			else if (accept[x + 1] == '\0')
+			{
+				return (count);
+			}
 		}
+		x++;
+
 	}
 	return (count);
 }
