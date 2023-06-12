@@ -1,10 +1,10 @@
 #include "main.h"
- /**
-  * _strpbrk - searches for a byte
-  * @s: where to search
-  * @accept: what to search for
-  * Return: what was found
-  */
+/**
+ * _strpbrk - searches for a byte
+ * @s: where to search
+ * @accept: what to search for
+ * Return: what was found
+ */
 char *_strpbrk(char *s, char *accept)
 {
 	int x;
