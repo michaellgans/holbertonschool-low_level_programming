@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 		}
 		else if (x == length)
 		{
-			return (s);
+			return (NULL);
 		}
 	}
 	return (NULL);
