@@ -18,4 +18,7 @@ void _puts_recursion(char *s)
 
 	/*move the pointer with a recursion*/
 	_puts_recursion(s + 1);
+
+	/*new line*/
+	_putchar(*s);
 }
