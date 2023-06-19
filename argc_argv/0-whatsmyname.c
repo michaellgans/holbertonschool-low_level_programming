@@ -19,6 +19,7 @@ void programName(char *argv[])
 
 int main(int argc, char *argv[])
 {
+	(void)argc;
 	programName(argv);
 	return (0);
 }
