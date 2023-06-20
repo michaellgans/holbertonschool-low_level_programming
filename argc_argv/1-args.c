@@ -7,7 +7,7 @@
 
 void printArguments(int argc)
 {
-	printf("%i\n", argc);
+	printf("%d\n", argc);
 }
 
 /**
@@ -17,5 +17,5 @@ void printArguments(int argc)
 
 int main(void)
 {
-	return(0);
+	return (0);
 }
