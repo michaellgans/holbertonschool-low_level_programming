@@ -21,6 +21,10 @@ int main(int argc, char *argv[])
 	y = atoi(argv[2]);
 	product = x * y;
 
+	if (argc > 3)
+	{
+		printf("Error");
+	}
 	printf("%i\n", product);
 
 	return (0);
