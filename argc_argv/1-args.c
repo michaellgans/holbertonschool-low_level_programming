@@ -17,5 +17,6 @@ void printArguments(int argc)
 
 int main(void)
 {
+	printArguments(argc);
 	return (0);
 }
