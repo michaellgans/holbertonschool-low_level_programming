@@ -17,19 +17,17 @@ int main(int argc, char *argv[])
 
 	(void)argc;
 
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	product = x * y;
-
-	if (argc > 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
+
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	product = x * y;
+
 	printf("%i\n", product);
-	}
 
 	return (0);
 }
