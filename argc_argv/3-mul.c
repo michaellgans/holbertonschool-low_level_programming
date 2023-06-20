@@ -21,11 +21,14 @@ int main(int argc, char *argv[])
 	y = atoi(argv[2]);
 	product = x * y;
 
-	if (argc > 3)
+	if (argc > 2)
 	{
-		printf("Error");
+		printf("Error\n");
 	}
+	else
+	{
 	printf("%i\n", product);
+	}
 
 	return (0);
 }
