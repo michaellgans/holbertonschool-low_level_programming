@@ -4,6 +4,6 @@
 #include <stdio.h>
 
 void programName(char *argv[]);
-void printArguments(int argc);
+int main(int argc, char *argv[]);
 
 #endif
