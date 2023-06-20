@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	y = atoi(argv[2]);
 	product = x * y;
 
-	if (argc > 2)
+	if (argc > 3)
 	{
 		printf("Error\n");
 		return (1);
