@@ -20,17 +20,22 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		return (NULL);
+		return (s2);
 	}
 	else if (s2 == NULL)
 	{
-		return (NULL);
+		return (s1);
 	}
 
 	/*allocate memory and define length*/
 	length = strlen(s1);
 
-	new_string = malloc(sizeof(new_string) * 3);
+	new_string = malloc(sizeof(char) * (length + strlen(s2) + 1));
+
+	if (new_string == NULL)
+	{
+		return (NULL);
+	}
 
 	for (x = 0; s1[x] != '\0'; x++)
 	{
