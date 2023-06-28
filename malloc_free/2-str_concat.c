@@ -20,11 +20,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		return (s2);
+		return (NULL);
 	}
 	else if (s2 == NULL)
 	{
-		return (s1);
+		return (NULL);
 	}
 
 	/*allocate memory and define length*/
