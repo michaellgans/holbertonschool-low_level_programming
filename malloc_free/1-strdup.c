@@ -13,7 +13,7 @@ char *_strdup(char *str)
 {
 	unsigned int x, y;
 	char *new_str;
-	unsigned int size = strlen(str);
+	unsigned int size;
 
 	if (str == NULL)
 	{
@@ -21,6 +21,8 @@ char *_strdup(char *str)
 	}
 
 	/*allocates memory of new string*/
+	size = strlen(str);
+
 	new_str = malloc(sizeof(char) * (size + 1));
 
 	if (new_str == NULL)
