@@ -15,10 +15,15 @@ char *_strdup(char *str)
 	char *new_str;
 	unsigned int size = strlen(str);
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
 	/*allocates memory of new string*/
 	new_str = malloc(sizeof(char) * (size + 1));
 
-	if (str == NULL)
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
