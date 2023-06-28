@@ -14,17 +14,24 @@ char *str_concat(char *s1, char *s2)
 {
 	/*initialize variables*/
 	int x, length;
+	char *new_string;
 
 	/*MAYBE if statementment for NULL*/
 
 	/*allocate memory and define length*/
 	length = strlen(s1);
 
-	s1 = malloc(sizeof(char) * (length + 1));
+	new_string = malloc(sizeof(new_string) * 3);
 
+	for (x = 0; s1[x] != '\0'; x++)
+	{
+		new_string[x] = s1[x];
+	}
 	for (x = 0; s2[x] != '\0'; x++, length++)
 	{
-		s1[length] = s2[x];
+		new_string[length] = s2[x];
 	}
-	return (s1);
+	new_string[length] = '\0';
+
+	return (new_string);
 }
