@@ -14,18 +14,21 @@ int **alloc_grid(int width, int height)
 	/* Declare Variables */
 	int x, y, z;
 	int **result;
+	/* if NULL, be NULL */
+	if (height <= 0 || width <= 0)
+		return (NULL);
 	/* Allocate memory for each row (height) which is a POINTER */
-	result = malloc(sizeof(int) * height);
+	result = malloc(sizeof(int *) * height);
 	if (result == NULL)
 		return (NULL);
 	/* Allocate memory for each index in the row (width) */
 	for (x = 0; x < height; x++)
 	{
-		result[x] = malloc(sizeof(int*) * width);
+		result[x] = malloc(sizeof(int) * width);
 		if (result[x] == NULL)
 		{
 			/* Frees alocations */
-			for (z = 0; z < x; z++)
+			for (z = 0; z < height; z++)
 			{
 				free(result[z]);
 			}
