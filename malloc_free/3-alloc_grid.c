@@ -11,7 +11,35 @@
 
 int **alloc_grid(int width, int height)
 {
-	if (width <= 0 || height <= 0)
-	{
+	/* Declare Variables */
+	int x, y, z;
+	int **result;
+	/* Allocate memory for each row (height) which is a POINTER */
+	result = malloc(sizeof(int) * height);
+	if (result == NULL)
 		return (NULL);
+	/* Allocate memory for each index in the row (width) */
+	for (x = 0; x < height; x++)
+	{
+		result[x] = malloc(sizeof(int) * width);
+		if (result[x] == NULL)
+		{
+			/* Frees alocations */
+			for (z = 0; z < x; z++)
+			{
+				free(result[z]);
+			}
+			free(result);
+			return (NULL);
+		}
 	}
+	/* starts each grid element at 0 */
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+		{
+			result[x][y] = 0;
+		}
+	}
+	return (result);
+}
