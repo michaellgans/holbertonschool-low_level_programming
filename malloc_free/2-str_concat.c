@@ -20,6 +20,10 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 	{
 		new_string = malloc(sizeof(char));
+		if (new_string == NULL)
+		{
+			return (NULL);
+		}
 		return (new_string);
 	}
 
