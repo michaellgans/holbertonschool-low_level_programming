@@ -19,12 +19,7 @@ char *str_concat(char *s1, char *s2)
 	/* check if s1 AND s2 are NULL */
 	if (s1 == NULL && s2 == NULL)
 	{
-		new_string = malloc(sizeof(char));
-		if (new_string == NULL)
-		{
-			return (NULL);
-		}
-		return (new_string);
+		return (NULL);
 	}
 
 	/* check if s1 is null */
