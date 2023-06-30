@@ -16,9 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Define Variables */
 	char *new_string;
 	unsigned int length;
-	/* initialize value */
-	length = strlen(s1) + n;
-	/* If a string is NULL, make it empty. */
+	/* If a string is NULL, make it a blank string */
 	if (s1 == NULL)
 	{
 		s1 = ("");
@@ -27,6 +25,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = ("");
 	}
+	/* initialize value */
+	length = strlen(s1) + n;
 	/* Allocate Memory */
 	new_string = malloc(sizeof(char) * (length + 1));
 	if (new_string == NULL)
