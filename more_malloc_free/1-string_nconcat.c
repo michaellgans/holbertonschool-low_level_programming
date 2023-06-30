@@ -34,9 +34,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	/* Concat Strings */
-	strncpy(new_string, s1, strlen(s1));
-	strncat(new_string, s2, n);
+	strncpy(new_string, s1, length);
 	new_string[length] = '\0';
+	strncat(new_string, s2, n);
 
 	return (new_string);
 }
