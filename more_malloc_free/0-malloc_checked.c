@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 	/* Declare Variables */
 	char *string;
 	/* Allocate memory to a string */
-	string = malloc(sizeof(int) * b);
+	string = malloc(sizeof(char) * b);
 	/* Check for NULL with Exit Status of 98*/
 	if (string == NULL)
 	{
