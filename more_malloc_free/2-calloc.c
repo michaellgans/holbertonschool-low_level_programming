@@ -27,10 +27,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	/* Sets each one to 0 */
 	index = (char *)array;
-	for (x = 0; x < nmemb; x++)
+	for (x = 0; x < nmemb * size; x++)
 	{
-		*index = 0;
-		index += size;
+		index[x] = 0;
 	}
 	return (array);
 }
