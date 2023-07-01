@@ -21,16 +21,17 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	/* calculate length */
-	x = 0;
-
-	while (min < max)
-	{
-		x++;
-		min++;
-	}
-
-	length = x;
+	length = max - min + 1;
 	/* allocate memory */
 	array = malloc(sizeof(int) * length);
+	if (array == NULL)
+	{
+		return (NULL);
+	}
+	/* create array */
+	for (x = 0; x < length; x++)
+	{
+		array[x] = min++;
+	}
 	return (array);
 }
