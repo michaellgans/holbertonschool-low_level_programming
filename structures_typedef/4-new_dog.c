@@ -19,8 +19,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog_who_dis = malloc(sizeof(dog_t));
 	if (new_dog_who_dis == NULL)
 	{
-		return (NULL);
 		free(new_dog_who_dis);
+		return (NULL);
 	}
 	/* link new dog to data points */
 	new_dog_who_dis->name = malloc(strlen(name) + 1);
