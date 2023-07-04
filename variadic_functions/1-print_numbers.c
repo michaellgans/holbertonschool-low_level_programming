@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_numbers - prints numbers
@@ -25,7 +26,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		number = va_arg(ptr, int);
 		printf("%i", number);
 
-		if (x < n - 1)
+		/* if separator is "", the length will be 0 */
+		if (strlen(separator) > 0 && x < n - 1)
 			printf("%s", separator);
 	}
 
