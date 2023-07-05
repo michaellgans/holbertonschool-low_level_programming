@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%c", (char) va_arg(args, int));
 				break;
-			case 'e':
+			case 'f':
 				printf("%f", va_arg(args, double));
 				break;
 			case 'i':
@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 		}
 		if ((format[x] == 'c'
 			|| format[x] == 'i'
-			|| format[x] == 'e'
+			|| format[x] == 'f'
 			|| format[x] == 's')
 			&& format[(x + 1)] != '\0')
 			printf(", ");
