@@ -16,9 +16,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int number;
 	va_list ptr;
 
-	if (separator == NULL)
-		exit(1);
-
 	va_start(ptr, n);
 
 	for (x = 0; x < n; x++)
@@ -26,10 +23,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		number = va_arg(ptr, int);
 		printf("%i", number);
 
-		if (separator == NULL)
-			exit(1);
-
-		if (x < n - 1)
+		if (separator != NULL && x < n - 1)
 			printf("%s", separator);
 	}
 
