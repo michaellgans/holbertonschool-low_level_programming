@@ -34,4 +34,6 @@ How to build and use linked lists</p>
 
 ## Task 4:
 
-
+<p align="center">
+  <a href="https://github.com/michaellgans"><img src="https://github-readme-stats.vercel.app/api?username=michaellgans&show_icons=true" alt="Michael's github stats"></a>
+</p>
