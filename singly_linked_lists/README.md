@@ -6,6 +6,9 @@
 <p> Markdown - https://www.markdownguide.org/basic-syntax/ <br>
 Data Structures - https://intranet.hbtn.io/concepts/889 <br></p>
 
+#### SYSK
+<p> When and why using linked lists vs arrays<br>
+How to build and use linked lists</p>
 ## Task 0: Print List
 >Write a function that prints all the elements of a list_t list.
 >
@@ -16,7 +19,14 @@ Data Structures - https://intranet.hbtn.io/concepts/889 <br></p>
 >- You are allowed to use printf <br>
 
 ## Task 1: List Length
->Write a function that returns the number of elements in a linked list_t list.>
+>Write a function that returns the number of elements in a linked list_t list.
+>
 >- Prototype: size_t list_len(const list_t *h);<br>
+
+## Task 2:
+
+## Task 3:
+
+## Task 4:
 
 
