@@ -10,11 +10,13 @@ size_t list_len(const list_t *h)
 {
 	/* Declare Variables */
 	const list_t *YouAreHere = h;
-	int count, x;
+	size_t count = 0;
+	int x;
 
 	/* Traverse through the list. */
 	for (x = 0; YouAreHere != NULL; x++)
 	{
+		YouAreHere = YouAreHere->next;
 		count++;
 	}
 
