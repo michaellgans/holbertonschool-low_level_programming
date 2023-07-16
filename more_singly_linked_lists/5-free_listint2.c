@@ -7,12 +7,12 @@
 
 void free_listint2(listint_t **head)
 {
-	if (head == NULL)
-		return;
-
 	/* Set pointer to head of list to start free */
 	listint_t *current = *head;
 	listint_t *next;
+
+	if (head == NULL)
+		return;
 
 	/* traverse through the list until our pointer is NULL */
 	while (current != NULL)
