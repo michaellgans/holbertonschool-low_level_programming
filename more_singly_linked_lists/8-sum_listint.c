@@ -13,8 +13,11 @@ int sum_listint(listint_t *head)
 	listint_t *current = head;
 
 	/* Edge Case */
-	if (current->next == NULL)
+	if (current == NULL)
 		return (0);
+	/* Edge Case */
+	if (current->next == NULL)
+		return (current->n);
 
 	/* Go through list */
 	while (current != NULL)
