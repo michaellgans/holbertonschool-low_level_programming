@@ -7,6 +7,9 @@
 
 void free_listint2(listint_t **head)
 {
+	if (head == NULL)
+		return;
+
 	/* Set pointer to head of list to start free */
 	listint_t *current = *head;
 	listint_t *next;
