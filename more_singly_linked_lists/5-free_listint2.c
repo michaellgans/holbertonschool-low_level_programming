@@ -8,18 +8,17 @@
 void free_listint2(listint_t **head)
 {
 	/* Set pointer to head of list to start free */
-	listint_t *current = *head;
-	listint_t *next;
+	listint_t *current;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		return;
 
 	/* traverse through the list until our pointer is NULL */
-	while (current != NULL)
+	while (*head != NULL)
 	{
-		next = current->next;
+		current = *head;
+		*head = (*head)->next;
 		free(current);
-		current = next;
 	}
 	*head = NULL;
 }
