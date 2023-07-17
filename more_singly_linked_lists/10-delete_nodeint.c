@@ -19,8 +19,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (*head == NULL)
 		return (-1);
 
+	/* Deleting beginning node */
+	if (index == 0)
+	{
+		*head = current->next;
+		free(current);
+		return (1);
+	}
+
 	/* Traverse the list */
-	while (current != NULL && count < index - 1)
+	while (current != NULL && count < (index - 1))
 	{
 		previous = current;
 		current = current->next;
