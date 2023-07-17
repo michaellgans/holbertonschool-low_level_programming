@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (x = 0; x < (sizeof(n) * 8); x++)
 	{
-		if (((n >> x) & 1) != ((m >> i) & 1))
+		if (((n >> x) & 1) != ((m >> x) & 1))
 			count++;
 	}
 	return (count);
