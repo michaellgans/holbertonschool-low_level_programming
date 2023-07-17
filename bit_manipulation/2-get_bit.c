@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * git_bit - prints a bit at given index.
+ * get_bit - prints a bit at given index.
  * @n: number to convert
  * @index: where to get the number
  * Return: value of bit
