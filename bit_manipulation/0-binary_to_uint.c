@@ -1,6 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
-#include "2-strlen.c"
 
 /**
  * binary_to_uint - converts binary to unsigned ints
