@@ -30,23 +30,19 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	/* Traverse the list */
 	while (current != NULL && count < (index - 1))
 	{
-		previous = current;
 		current = current->next;
 		count++;
 	}
 
 	/* Is index outside of the list? */
-	if (current == NULL)
+	if (count != (index - 1) || current->next == NULL)
 		return (-1);
 
 	/* Update links */
-	if (previous == NULL) /* Previous would be NULL if idx is head */
-		*head = current->next;
-	else
-		previous->next = current->next; /* X -> Z */
-
+	previous = current->next;
+	current->next = (current->next)->next;
 	/* Free Y node */
-	free(current);
+	free(previous);
 
-	return (0);
+	return (1);
 }
