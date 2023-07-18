@@ -13,7 +13,8 @@ How to build and use linked lists <br>
  - https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/ <br>
  - https://www.geeksforgeeks.org/applications-advantages-and-disadvantages-of-linked-list/ </p>
 
-## Task 0: [Print List](https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/0-print_list.c)
+## Task 0: Print List <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/0-print_list.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
 <details><summary>Task Requirements</summary>
 
 >Write a function that prints all the elements of a `list_t` list.
@@ -24,14 +25,15 @@ How to build and use linked lists <br>
 >- If `str` is `NULL`, print `[0] (nil)` <br>
 >- You are allowed to use `printf` <br></details>
 
-## Task 1: [List Length](https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/1-list_len.c)
+## Task 1: List Length <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/1-list_len.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
 <details><summary> Task Requirements</summary>
 
 >Write a function that returns the number of elements in a linked `list_t` list.
 >
 >- Prototype: `size_t list_len(const list_t *h);`<br></details>
 
-## Task 2: [Add Node](https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/2-add_node.c)
+## Task 2: Add Node <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/2-add_node.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
 <details><summary>Task Requirements</summary>
 
 >Write a function that adds a new node at the begining of a `list_t` list.
@@ -41,7 +43,8 @@ How to build and use linked lists <br>
 >- `str` needs to be duplicated <br>
 >- You are allowed to use `strdup` <br></details>
 
-## Task 3: [Add Node at the End](https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/3-add_node_end.c)
+## Task 3: Add Node at the End <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/3-add_node_end.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
 <details><summary>Task Requirements</summary>
 
 >Write a function that adds a new node at the end of a `list_t` list.
@@ -51,7 +54,8 @@ How to build and use linked lists <br>
 >- `str` needs to be duplicated <br>
 >- You are allowed to use `strdup` <br></details>
 
-## Task 4: [Free List](https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/4-free_list.c)
+## Task 4: Free List <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/singly_linked_lists/4-free_list.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
 <details><summary>Task Requirements</summary>
 
 >Write a function that frees a `list_t` list.
