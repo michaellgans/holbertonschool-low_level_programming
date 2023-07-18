@@ -26,8 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(letters);
 	if (buffer == NULL)
 	{
-		close(fd);
-		return (-1);
+		return (0);
 	}
 	if (lseek(fd, 0, SEEK_SET) == -1)
 	{
@@ -41,11 +40,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bytesRead == -1)
 	{
 		free(buffer);
-		close(fd);
 		return (0);
 	}
 	/* Write to stdout */
-	bytesWritten = write(1, buffer, bytesRead);
+	bytesWritten = write(STDOUT_FILENO, buffer, bytesRead);
+
 	free(buffer);
 	close(fd);
 	return (bytesWritten);
