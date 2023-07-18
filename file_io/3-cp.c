@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 
 void safe_close(int fd)
 {
-	if (close(FD) == -1)
+	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 		exit(100);
