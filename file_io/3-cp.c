@@ -7,9 +7,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to;
+	int fd_from, fd_to, bytesRead, bytesWritten;
 	char buffer[BUFFER_SIZE];
-	ssize_t bytesRead, bytesWritten;
 
 	if (argc != 3)
 	{
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -43,7 +42,21 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	close(fd_from);
-	close(fd_to);
-	return (1);
+	safe_close(fd_from);
+	safe_close(fd_to);
+	return (0);
+}
+
+/**
+ * safe_close - close files
+ * @fd: file descriptor
+ */
+
+void safe_close(int fd)
+{
+	if (close(FD) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
+		exit(100);
+	}
 }
