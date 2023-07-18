@@ -1,52 +1,49 @@
 #include "main.h"
-
 /**
- * cp_file - coppies the content of a file to another file
- * @file_from: pointer to old file
- * @file_to: pointer to new file
+ * main - coppies the content of a file to another file
+ * @argc: number of arguments
+ * @argv: arguments
  * Return: 1
  */
-
-int cp_file(const char *file_from, const char *file_to)
+int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
-	char *buffer;
+	char buffer[BUFFER_SIZE];
 	ssize_t bytesRead, bytesWritten;
-	off_t file_size;
 
-	/* Open file_from */
-	fd_from = open(file_from, O_RDONLY);
-	if (fd_from == -1)
-		return (-1); /* Error if can't open */
-
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fd_to == -1)
-		return (-1); /* Error if can't open */
-
-	/* Allocate memory for buffer */
-	file_size = lseek(fd_from, 0, SEEK_END);
-	lseek(fd_from, 0, SEEK_SET);
-	buffer = malloc(file_size);
-	if (buffer == NULL)
+	if (argc != 3)
 	{
-		return (-1);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
-
+	fd_from = open(argv[1], O_RDONLY);
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	/* Read and Write at the same time */
-	while ((bytesRead = read(fd_from, buffer, sizeof(buffer))) > 0)
+	while ((bytesRead = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		bytesWritten = write(fd_to, buffer, bytesRead);
 		if (bytesWritten == -1)
-			return (-1); /* Error writing */
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
-
 	if (bytesRead == -1)
 	{
-		return (-1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
-
 	close(fd_from);
 	close(fd_to);
-
 	return (1);
 }
