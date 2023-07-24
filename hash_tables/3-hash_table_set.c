@@ -10,26 +10,34 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	/* declare new_node and allocate memory */
-	hash_node_t *new_node;
-	unsigned long int index;
-
+	hash_node_t *new_node; /* create pointer to new node */
+	unsigned long int index; /* where new node should be located */
+	hash_node_t *current; /* current pointer */
 	/* Edge Cases */
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
-
 	/* determine where node should be inserted */
 	index = key_index((const unsigned char *)key, ht->size);
+	current = ht->array[index];
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-
+	/* Traverse the linked list at the calculated index */
+	while (current != NULL)
+	{
+		if (strcmp(current->key, key) == 0) /* Does key already exist? */
+		{
+			free(current->value); /* free old value */
+			current->value = strdup(value); /* update value */
+			return (1);
+		}
+		current = current->next; /* next node */
+	}
 	/* Add node */
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = NULL;
-
 	/* add node into linked list at index */
 	if (ht->array[index] == NULL)
 	{
