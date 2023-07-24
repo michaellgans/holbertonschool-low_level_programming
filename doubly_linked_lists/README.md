@@ -38,3 +38,23 @@ How to use doubly linked lists - <br></p>
 >- Prototype: dlistint_t `*add_dnodeint(dlistint_t **head, const int n);`<br>
 >- Return: the address of the new element, or `NULL` if it failed<br>
 >- `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_dnodeint.c 0-print_dlistint.c` <br></details>
+
+## Task 3: Add Node at the End <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/doubly_linked_lists/2-add_dnodeint.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
+<details><summary>Task Requirements</summary>
+
+>Write a function that adds a new node at the beginning of a `dlistint_t` list.
+>
+>- Prototype: dlistint_t `*add_dnodeint(dlistint_t **head, const int n);`<br>
+>- Return: the address of the new element, or `NULL` if it failed<br>
+>- `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_dnodeint.c 0-print_dlistint.c` <br></details>
+
+## Task 4: Free List <a href="https://github.com/michaellgans/holbertonschool-low_level_programming/blob/main/doubly_linked_lists/2-add_dnodeint.c"><img src="https://github.com/michaellgans/holbertonschool-low_level_programming/assets/131380667/3e2fad25-2587-458e-bc99-072677c486b9" width="35" height="35"></a>
+
+<details><summary>Task Requirements</summary>
+
+>Write a function that adds a new node at the beginning of a `dlistint_t` list.
+>
+>- Prototype: dlistint_t `*add_dnodeint(dlistint_t **head, const int n);`<br>
+>- Return: the address of the new element, or `NULL` if it failed<br>
+>- `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_dnodeint.c 0-print_dlistint.c` <br></details>
