@@ -1,53 +1,44 @@
 #include "hash_tables.h"
-
 /**
- * hash_table_set - adds an element to the hash table
- * @ht: points to the table to update
- * @key: key to add
- * @value: value associated with key
- * Return: 1 or 0
- */
-
+ * hash_table_set - add an element to a hash table
+ * @ht: hash table to update key/val pair to
+ * @key: key to be indexed
+ * @value: must be duped, can be empty string
+ * Return: 1 if succeeded, 0 otherwise
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node; /* create pointer to new node */
-	unsigned long int index; /* where new node should be located */
-	hash_node_t *current; /* current pointer */
-	/* Edge Cases */
-	if (ht == NULL || key == NULL || value == NULL)
+	unsigned long int index;
+	hash_node_t *current, *entry = NULL;
+	char *newVal = NULL;
+
+	if (!ht || !key || !value)
 		return (0);
-	/* determine where node should be inserted */
+
 	index = key_index((const unsigned char *)key, ht->size);
+
 	current = ht->array[index];
 
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
+	while (current)
 	{
-		free(new_node);
-		return (0);
-	}
-	while (current != NULL)
-	{
-		if (strcmp(current->key, key) == 0) /* Does key already exist? */
+		if (strcmp(current->key, key) == 0)
 		{
-			free(current->value); /* free old value */
-			current->value = strdup(value); /* update value */
+			newVal = strdup(value);
+			free(current->value);
+			current->value = newVal;
 			return (1);
 		}
-		current = current->next; /* next node */
+		current = current->next;
 	}
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
-	new_node->next = NULL;
-	/* add node into linked list at index */
-	if (ht->array[index] == NULL)
+	entry = malloc(sizeof(hash_node_t));
+	if (entry == NULL)
 	{
-		ht->array[index] = new_node; /* creates a new linked list */
+		free(entry);
+		return (0);
 	}
-	else
-	{
-		new_node->next = ht->array[index]; /* add it to the beginning */
-		ht->array[index] = new_node;
-	}
+	entry->key = strdup(key);
+	entry->value = strdup(value);
+	entry->next = ht->array[index];
+	ht->array[index] = entry;
 	return (1);
 }
