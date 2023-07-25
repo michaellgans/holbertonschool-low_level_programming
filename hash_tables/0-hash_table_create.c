@@ -31,7 +31,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	/* If memory allocation failes */
 	if (array == NULL)
 	{
-		free(table);
+		free(array);
 		return (NULL);
 	}
 
