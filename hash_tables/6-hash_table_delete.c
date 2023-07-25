@@ -9,25 +9,27 @@ void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int x; /* iterator */
 	hash_node_t *current;
-	hash_node_t *temp;
 
 	if (ht == NULL)
 		return;
 
 	for (x = 0; x < ht->size; x++)
 	{
-		current = ht->array[x]; /* how to move through the buckets */
-		while (current != NULL)
+		while (ht->array[x])
 		{
-			temp = current->next;
-			/* ^^saves the pass to the next node before deleting */
-			free(current->key);
-			free(current->value);
-			free(current);
-			current = temp; /* moves to the next node */
+			current = ht->array[x]->next;
+
+			free(ht->array[x]->key);
+			free(ht->array[x]->value);
+			free(ht->array[x]);
+
+			ht->array[x] = current;
 		}
-		ht->array[x] = NULL; /*set array to NULL after deleting data */
 	}
 	free(ht->array); /*free array*/
+
+	ht->array = NULL;
+	ht->size = 0;
+
 	free(ht); /*free table*/
 }
