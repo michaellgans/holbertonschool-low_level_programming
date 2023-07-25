@@ -10,9 +10,6 @@ void hash_table_delete(hash_table_t *ht)
 	unsigned long int x; /* iterator */
 	hash_node_t *current;
 
-	if (ht == NULL)
-		return;
-
 	for (x = 0; x < ht->size; x++)
 	{
 		while (ht->array[x])
