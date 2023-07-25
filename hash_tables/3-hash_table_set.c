@@ -22,8 +22,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
+	{
+		free(new_node);
 		return (0);
-	/* Traverse the linked list at the calculated index */
+	}
 	while (current != NULL)
 	{
 		if (strcmp(current->key, key) == 0) /* Does key already exist? */
@@ -34,7 +36,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next; /* next node */
 	}
-	/* Add node */
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = NULL;
